@@ -23,8 +23,7 @@ namespace jsonhex {
         while(iter != end) {
             std::smatch match = *iter;
             auto hexValue = match.str();
-            char* e;
-            auto value = strtoull(hexValue.c_str(), &e, 0);
+            auto value = strtoull(hexValue.c_str(), 0, 16);
             output.replace(output.find(hexValue), hexValue.length(), std::to_string(value));
             ++iter;
         }
