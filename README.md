@@ -31,7 +31,7 @@ Would be parsed to:
 ```cpp
 struct ParseMe {
   uint64_t HexValue; // 999999999999999999
-  vector<uint64_t> HexArr; // [174, 80]
+  vector<int> HexArr; // [174, 80]
 }
 
 auto data = jsonhex::parse(path);
