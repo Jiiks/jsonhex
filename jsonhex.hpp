@@ -1,9 +1,6 @@
+// https://github.com/Jiiks/jsonhex
 #pragma once
-#include <iostream>
 #include <fstream>
-#include <sstream>
-#include <string>
-#include <vector>
 #include <regex>
 // include correctly in your project
 #include <nlohmann/json.hpp>
@@ -14,7 +11,6 @@ namespace jsonhex {
         std::ifstream f(fPath);
         std::string content((std::istreambuf_iterator<char>(f)),
             std::istreambuf_iterator<char>());
-        
 
         std::sregex_iterator iter(content.begin(), content.end(), jsonhexPattern);
         std::sregex_iterator end;
