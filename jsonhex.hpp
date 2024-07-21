@@ -22,13 +22,10 @@ namespace jsonhex {
 
         while(iter != end) {
             std::smatch match = *iter;
-            std::string hexValue = match[1].str();
-
-            std::istringstream converter(hexValue);
-            uint64_t intValue;
-            converter >> std::hex >> intValue;
-
-            output.replace(output.find("0x" + hexValue), ("0x" + hexValue).size(), std::to_string(intValue));
+            auto hexValue = match.str();
+            char* e;
+            auto value = strtoull(hexValue.c_str(), &e, 0);
+            output.replace(output.find(hexValue), hexValue.length(), std::to_string(value));
             ++iter;
         }
 
