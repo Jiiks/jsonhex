@@ -39,3 +39,7 @@ ParseMe p{};
 data.at("hexvalue").get_to(p.HexValue);
 data.at("hexarr").get_to(p.HexArr);
 ```
+
+TODO
+- Serializing
+- Support for other types maybe
