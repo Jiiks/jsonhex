@@ -23,7 +23,7 @@ Supports hex values anywhere so for example the following:
 ```json
 {
   "hexvalue": 0xDE0B6B3A763FFFF,
-  "hexarr": [ "0xAE", "0x50" ]
+  "hexarr": [ 0xAE, 0x50 ]
 }
 ```
 
